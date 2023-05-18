@@ -4,6 +4,7 @@
 // of the anonymous function on line 6
 
 const substitutionModule = (function () {
+  // set up the variable for trueAlphabet
   const trueAlphabet = "abcdefghijklmnopqrstuvwxyz";
 
   function substitution(input, alphabet, encode = true) {
@@ -12,7 +13,7 @@ const substitutionModule = (function () {
       return false;
     }
 
-    // Iterate over each character in the alphabet Check if any character is repeated
+    // Iterate over each character in the alphabet check if any character is repeated
     for (let i = 0; i < alphabet.length; i++) {
       for (let j = i + 1; j < alphabet.length; j++) {
         if (alphabet[i] === alphabet[j]) {
