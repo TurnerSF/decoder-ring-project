@@ -19,12 +19,12 @@ const caesarModule = (function () {
 
     let loweredInput = input.toLowerCase();
 
-    // make sure that the input thats passed into the param is a letter in the alphabet
     let newMessage = "";
     if (encode) {
-      //loop through the input move the index of the input by the shift number
+      // iterate through the input. Move the index of the input by the shift number
       for (let i = 0; i < loweredInput.length; i++) {
         const letter = loweredInput[i];
+       // Find the index of the letter in the alphabetArray
         let letterIndex = alphabetArray.indexOf(letter);
         if (letterIndex > -1) {
           // Shift here
