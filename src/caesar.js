@@ -11,7 +11,7 @@ const caesarModule = (function () {
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
   const alphabetArray = alphabet.split("");
 
-  // First i should start by making sure the shift value is no greater than 25 || less than -25 || === to 0
+  // make sure the shift value is no greater than 25 || less than -25 || === to 0
   function caesar(input = "", shift = 0, encode = true) {
     if (shift === 0 || shift < -25 || shift > 25) {
       return false;
@@ -19,7 +19,7 @@ const caesarModule = (function () {
 
     let loweredInput = input.toLowerCase();
 
-    // then i want to make sure that the input thats passed into the param is a letter in the alphabet
+    // make sure that the input thats passed into the param is a letter in the alphabet
     let newMessage = "";
     if (encode) {
       //loop through the input move the index of the input by the shift number
