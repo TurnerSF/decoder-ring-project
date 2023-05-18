@@ -1,6 +1,6 @@
 const polybiusModule = (function () {
   // you can add any code you want within this function scope
-
+  // set the decode key
   const decodeKey = {
     11: "a",
     21: "b",
@@ -28,7 +28,7 @@ const polybiusModule = (function () {
     45: "y",
     55: "z",
   };
-
+  // set the encode key
   const encodeKey = {
     a: 11,
     b: 21,
@@ -88,10 +88,10 @@ const polybiusModule = (function () {
     return endMessage;
   }
   function polybius(input, encode = true) {
-    // tenary operator
-    // return encode ? encoder(input) : decoder(input);
+    // If encode is false return the decoder function
     if (!encode) {
       return decoder(input);
+     // else return the encoder function 
     } else {
       return encoder(input);
     }
@@ -102,13 +102,3 @@ const polybiusModule = (function () {
 })();
 
 module.exports = { polybius: polybiusModule.polybius };
-
-//   const newMessage = ""
-//   for( let i = 0; i < loweredInput.length; i++){
-//     let iteratedMessage = loweredInput[i]
-//     if(iteratedMessage === Object.keys(polybiusObj)){
-//       newMessage += Object.values(polybiusObj)
-//     }
-//   }
-
-// }
